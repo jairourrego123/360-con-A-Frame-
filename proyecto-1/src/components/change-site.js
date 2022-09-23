@@ -1,8 +1,4 @@
 import AFRAME from'aframe';
-
-import React from 'react';
-
-function Imagen () {
 AFRAME.registerComponent('change-site', {
     schema: {
      img:{type:'string'}
@@ -17,5 +13,5 @@ AFRAME.registerComponent('change-site', {
         }); 
     }
   });
-}
-export default Imagen; 
+
+ 
