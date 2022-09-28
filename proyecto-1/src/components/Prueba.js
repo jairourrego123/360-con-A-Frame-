@@ -10,7 +10,7 @@ function Prueba() {
     //  <Scene/>
 
     <a-scene>
-     
+
       {/* inside = salida posgrados  outside = entradaposgrados */}
       <a-assets>
 
@@ -68,18 +68,13 @@ function Prueba() {
             <a-text value="Posgrados" color="white" align="center"></a-text>
           </a-plane>
           {/* position="-0.9 -1 10" */}
-          <a-circle  position="-0.9 -1 10"  rotation="0 2 0" radius="2" color="white"
-            class="clickable" change-site="img: #ugc1;" 
-            sound="on:mouseenter; src:#alerta">
-              <a-image src="#entrada" class="clickable" change-site="img: #ugc;1" ></a-image>
-          </a-circle>
-          <a-circle  position="-0.9 -1 0" rotation="0 -45 0" radius="2" color="white"
-            class="clickable" visible="true"
-            change-site="img: #ingenieria "
-           >
-            <a-image src="#salida"></a-image>
 
-          </a-circle>
+          <a-image position="-0.9 -1 10" src="#entrada" class="clickable entrada" change-site="img: #ugc1;zone: .salida;sound:#click;" sound="on:mouseenter; src:#alerta"></a-image>
+
+
+          <a-image position="-0.9 -1 0" class="salida" src="#salida" change-site="img: #ugc; zone: .entrada;sound:#click; " visible="false" sound="on:mouseenter; src:#click"></a-image>
+
+
 
         </a-entity>
 
@@ -113,7 +108,7 @@ function Prueba() {
           </a-plane>
         </a-entity>
       </a-entity>
-      <a-sky id="my-sky" src="#ingenieria"></a-sky>
+      <a-sky id="my-sky" src="#ugc"></a-sky>
     </a-scene>
 
   );

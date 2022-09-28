@@ -1,7 +1,9 @@
 import AFRAME from'aframe';
 AFRAME.registerComponent('change-site', {
     schema: {
-     img:{type:'string'}
+     img:{type:'string'},
+     zone:{type:'string'},
+     sound:{type:'string'}
 
     },
   
@@ -35,7 +37,7 @@ AFRAME.registerComponent('change-site', {
             var aText = thisAPlane.querySelector("a-text");
             if(aText)aText.setAttribute("color","white")
 
-            var allACircle = grandParentEntity.querySelectorAll("a-circle"); // coje todos los circulos y los deja invisibles
+            var allACircle = grandParentEntity.querySelectorAll("a-image"); // coje todos los circulos y los deja invisibles
             Object.keys(allACircle).forEach(function(key){
                 allACircle[key].setAttribute("visible","false")
                 allACircle[key].classList.remove("clickable"); // y les quita la clase clickeable 
