@@ -42,7 +42,7 @@ AFRAME.registerComponent('change-site', {
                 allACircle[key].setAttribute("visible","false")
                 allACircle[key].classList.remove("clickable"); // y les quita la clase clickeable 
             });
-            console.log(data)
+         
             var allACirclInThisZone=parentEntity.querySelectorAll(data.zone);
            
             Object.keys(allACirclInThisZone).forEach(function(key){

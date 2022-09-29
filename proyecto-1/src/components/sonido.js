@@ -4,7 +4,6 @@
         console.log("togleSound")
         var mySky = document.querySelector("#my-sky");
         var speakerImg = document.querySelector("#speaker-img");
-      
         var sounding = mySky.getAttribute("sounding");
         
         if(sounding == "true"){

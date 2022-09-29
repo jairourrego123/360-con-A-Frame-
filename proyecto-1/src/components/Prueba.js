@@ -35,7 +35,7 @@ function Prueba() {
         <audio id="sound-entrada" src="sound/mario-bros.mp3" preload="auto"></audio>
         <audio id="sound-salida" src="sound/mario-bros tuberia.mp3" preload="auto"></audio>
         <audio id="click" src="sound/alerta-nextel-ringtones.mp3" preload="auto"></audio>
-        <audio id="sound-fondo" src="sound/alerta-nextel-ringtones.mp3" preload="auto"></audio>
+        <audio id="aves" src="sound/aves.mp3" preload="auto"></audio>
 
         {/* <Imagen/> */}
       </a-assets>
@@ -53,7 +53,7 @@ function Prueba() {
             animation__position="property:rotation;to:360 0 0; dir:alternate;dur:3000;loop:true"></a-box>
 
           <a-plane color="black" position="1.9 0 0" width="3" height="0.25" class="clickable"
-            change-site="img: #ingenieria "
+            change-site="img: #ingenieria;zone:ingenieria;sound:ingenieria "
             sound="on:mouseenter; src:#gallo">
 
             <a-text value="Ingenieria" color="gray" align="center"></a-text>
@@ -68,7 +68,7 @@ function Prueba() {
             animation__position="property:rotation;to:360 0 0; dir:alternate;dur:3000;loop:true"></a-box>
 
           <a-plane color="black" position="1.9 0 0" width="3" height="0.25"
-            change-site="img: #ugc;" class="clickable"
+            change-site="img: #ugc;zone: .entrada;sound:ugc" class="clickable"
             sound="on:mouseenter; src:#alerta">
 
             <a-text value="Posgrados" color="white" align="center"></a-text>
@@ -78,10 +78,9 @@ function Prueba() {
           <a-image position="-0.9 -1 10" src="#entrada" class="clickable entrada" change-site="img: #ugc1;zone: .salida;sound:#click;" sound="on:mouseenter; src:#alerta"></a-image>
 
 
-          <a-image position="-0.9 -1 0" class="salida" src="#salida" change-site="img: #ugc; zone: .entrada;sound:#click; " visible="false" sound="on:mouseenter; src:#click"></a-image>
+          <a-image position="7.026 1.922 -0.206" class="salida" src="#salida" change-site="img: #ugc; zone: .entrada;sound:#click;" visible="false" sound="on:mouseenter; src:#click"></a-image>
 
-
-
+     
         </a-entity>
 
         
@@ -95,7 +94,7 @@ function Prueba() {
             animation__position="property:rotation;to:360 0 0; dir:alternate;dur:3000;loop:true"></a-box>
 
           <a-plane color="black" position="1.9 0 0" width="3" height="0.25" class="clickable"
-            change-site="img: #campus"
+            change-site="img: #campus;zone:campus;sound:campus"
             sound="on:mouseenter; src:#tuberia">
 
             <a-text value="Campus" color="gray" align="center"></a-text>
@@ -107,7 +106,7 @@ function Prueba() {
             animation__position="property:rotation;to:360 0 0; dir:alternate;dur:3000;loop:true"></a-box>
 
           <a-plane color="black" position="1.9 0 0" width="3" height="0.25" class="clickable"
-            change-site="img: #conciliacion"
+            change-site="img: #conciliacion;zone:conciliacion;sound:campus"
             sound="on:mouseenter; src:#mario">
 
             <a-text value="Conciliacion" color="gray" align="center"></a-text>
@@ -115,7 +114,7 @@ function Prueba() {
         </a-entity>
       </a-entity>
       <a-sky id="my-sky" src="#ugc"
-      sound="src: #mario; loop: true" data-sounding="false">{/* este atributo no existe es para referenciar si esta sonando o no  */}
+      sound="src: #aves; loop: true" data-sounding="false">{/* este atributo no existe es para referenciar si esta sonando o no  */}
    
         </a-sky>  
     </a-scene>
