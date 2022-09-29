@@ -116,8 +116,11 @@ const Scene = () => {
         ref={mountRef} // hacer un query
         style={{width:'100%',height:'100vh'}}
     >
-       
+          <h1></h1>
         </div>
+
+
+
   )
 }
 

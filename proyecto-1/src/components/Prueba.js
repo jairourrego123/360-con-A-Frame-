@@ -1,6 +1,8 @@
 import 'aframe';
 import { AFRAME } from './change-site'
 import React from 'react';
+import '../App.css';
+import './sonido'
 
 
 function Prueba() {
@@ -9,8 +11,11 @@ function Prueba() {
   return (
     //  <Scene/>
 
+    <div>
+      
+      
     <a-scene>
-
+    
       {/* inside = salida posgrados  outside = entradaposgrados */}
       <a-assets>
 
@@ -30,6 +35,7 @@ function Prueba() {
         <audio id="sound-entrada" src="sound/mario-bros.mp3" preload="auto"></audio>
         <audio id="sound-salida" src="sound/mario-bros tuberia.mp3" preload="auto"></audio>
         <audio id="click" src="sound/alerta-nextel-ringtones.mp3" preload="auto"></audio>
+        <audio id="sound-fondo" src="sound/alerta-nextel-ringtones.mp3" preload="auto"></audio>
 
         {/* <Imagen/> */}
       </a-assets>
@@ -78,7 +84,7 @@ function Prueba() {
 
         </a-entity>
 
-
+        
 
 
 
@@ -108,9 +114,14 @@ function Prueba() {
           </a-plane>
         </a-entity>
       </a-entity>
-      <a-sky id="my-sky" src="#ugc"></a-sky>
+      <a-sky id="my-sky" src="#ugc"
+      sound="src: #mario; loop: true" data-sounding="false">{/* este atributo no existe es para referenciar si esta sonando o no  */}
+   
+        </a-sky>  
     </a-scene>
-
+    
+    </div>
+    
   );
 }
 

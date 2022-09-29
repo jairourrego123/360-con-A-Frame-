@@ -1,4 +1,22 @@
-.App {
+.boton-sonido{
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  z-index: 1;
+}
+#speaker{
+  border-radius: 6px;
+
+}
+
+#speaker-img{
+  width: 100%;
+  height: auto;
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
